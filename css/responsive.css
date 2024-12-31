@@ -216,6 +216,10 @@
     .ag-item:hover {
         scale: 1;
     }
+    section.banner-section{
+        height: 100svh;
+        min-height: 100%;
+    }
 }
 /* Max Width 991px Ends */
 /* Max Width 767px */
