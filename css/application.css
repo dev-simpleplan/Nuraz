@@ -313,7 +313,7 @@ header nav{
 section.banner-section{
     height: 100vh;
     min-height: 700px;
-    background-image: url('/img/banner.jpeg');
+    background-image: url('img/banner.jpeg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -386,7 +386,7 @@ section.banner-section .custom-container{
     scale: 1.1;
 }
 .ss-item::after{
-    background-image: url('/img/texture.png');
+    background-image: url('img/texture.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -571,7 +571,7 @@ section.elegance .custom-container{
 /* Step Closer Section */
 
 .step-closer{
-    background-image: url('/img/step-closer.jpeg');
+    background-image: url('img/step-closer.jpeg');
     background-position: top center;
     background-attachment: fixed;
     background-size: 100%;
