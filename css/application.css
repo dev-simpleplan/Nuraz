@@ -233,6 +233,66 @@ input{
 
 /* Custom Css Ends */
 
+/* Loader */
+
+.loader{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+}
+.loader.display{
+    display: none;
+}
+.load-wrapper {
+    display: flex;
+    height: 100%;
+    position: relative;
+    perspective: 1500px;
+}
+.load-wrapper .l-left, .load-wrapper .l-right{
+    width: 50%;
+    background-color: #3C0A17;
+    transition: 2s all ease;
+    transition-delay: 0.3s;
+}
+.load-wrapper .l-left{
+    transform-origin: 0%;
+}
+.load-wrapper .l-right{
+    transform-origin: 100%;
+}
+.loader.page-loaded .load-wrapper .l-left{
+    transform: rotateY(180deg);
+}
+.loader.page-loaded .load-wrapper .l-right{
+    transform: rotateY(-180deg);
+}
+.load-wrapper .l-left img, .load-wrapper .l-right img{
+    opacity: 0.1;
+}
+.load-logo svg{
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+}
+.loader.page-loaded .load-logo{
+    opacity: 0;
+}
+.load-logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 200px;
+    width: 100%;
+    transition: 0.4s all ease;
+    transform-origin: center;
+}
+
+/* Loader Ends */
+
 /* Header */
 
 header{
