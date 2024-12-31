@@ -324,6 +324,9 @@
     .spacer {
         height: 80px;
     }
+    .bc-sm {
+        min-width: 160px;
+    }
 }
 /* Max Width 767px Ends */
 /* Responsive Css Ends */

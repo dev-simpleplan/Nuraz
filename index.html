@@ -96,9 +96,9 @@
         <div class="custom-container">
             <nav>
                 <div class="left-nav nav-link-con">
-                    <a href="#about">About</a>
-                    <a href="#products">Products</a>
-                    <a href="#why-us">Why Us</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#products" class="nav-link">Products</a>
+                    <a href="#why-us" class="nav-link">Why Us</a>
                 </div>
                 <a class="nav-icon-con" href="index.html">
                     <div class="nav-icon pos-rel">
@@ -106,8 +106,8 @@
                     </div>
                 </a>
                 <div class="right-nav nav-link-con">
-                    <a href="#testimonial">Testimonials</a>
-                    <a href="#contact-us">Contact Us</a>
+                    <a href="#testimonial" class="nav-link">Testimonials</a>
+                    <a href="#contact-us" class="nav-link">Contact Us</a>
                 </div>
                 <div class="ham-menu">
                     <div class="ham-icon pos-rel">
@@ -122,11 +122,11 @@
                         </svg>
                     </div>
                     <div class="ham-menu-link">
-                        <a href="#about">About</a>
-                        <a href="#products">Products</a>
-                        <a href="#why-us">Why Us</a>
-                        <a href="#testimonial">Testimonials</a>
-                        <a href="#contact-us">Contact Us</a>
+                        <a href="#about" class="nav-link">About</a>
+                        <a href="#products" class="nav-link">Products</a>
+                        <a href="#why-us" class="nav-link">Why Us</a>
+                        <a href="#testimonial" class="nav-link">Testimonials</a>
+                        <a href="#contact-us" class="nav-link">Contact Us</a>
                     </div>
                 </div>
             </nav>
@@ -1005,6 +1005,28 @@
         });
     </script>
     <!-- Header Ends -->
+
+    <!-- Anchor Jumpers -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        const navLinks = document.querySelectorAll(".nav-link");
+    
+        navLinks.forEach(link => {
+          link.addEventListener("click", function(e) {
+            e.preventDefault();
+    
+            const targetId = this.getAttribute("href").substring(1); // Remove the "#" character
+            const targetSection = document.getElementById(targetId);
+    
+            if (targetSection) {
+              const offset = targetSection.offsetTop -(window.innerHeight * 0.15); // 20% above the section
+              window.scrollTo({top: offset, behavior: "smooth"});
+            }
+          });
+        });
+      });
+    </script>
+    <!-- Anchor Jumper Ends -->
 
     <!-- Script Ends -->
 </body>
