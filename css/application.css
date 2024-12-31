@@ -40,7 +40,7 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span{
     font-weight: 200;
 }
 h1{
-    font-size: 92.92px;
+    font-size: clamp(42px, 6vw, 92.92px);
     font-weight: 200;
     line-height: 90%;
     text-underline-position: from-font;
@@ -50,7 +50,7 @@ h1{
 }
 h1 span{
     font-family: var(--pp);
-    font-size: 50.76px;
+    font-size: clamp(28px, 6vw, 50.76px);
     font-weight: 200;
     line-height: 90%;
     text-underline-position: from-font;
@@ -59,7 +59,7 @@ h1 span{
     text-transform: none;
 }
 h2{
-    font-size: 48px;
+    font-size: clamp(30px, 5vw, 48px);
     font-weight: 200;
     line-height: 100%;
     text-underline-position: from-font;
@@ -68,7 +68,7 @@ h2{
 }
 h2 span{
     font-family: var(--pp);
-    font-size: 24px;
+    font-size: clamp(16px, 2vw, 24px);
     font-style: italic;
     font-weight: 200;
     line-height: 100%;
@@ -78,7 +78,7 @@ h2 span{
     text-transform: none;
 }
 h2 span.big-span{
-    font-size: 48px;
+    font-size: clamp(30px, 5vw, 48px);
 }
 h2.center-flex{
     display: flex;
@@ -87,7 +87,7 @@ h2.center-flex{
     gap: 8px;
 }
 h3{
-    font-size: 64px;
+    font-size: clamp(30px, 4vw, 64px);
     font-weight: 200;
     line-height: 110%;
     text-underline-position: from-font;
@@ -97,7 +97,7 @@ h3{
 }
 h3 span{
     font-family: var(--pp);
-    font-size: 48px;
+    font-size: clamp(30px, 5vw, 48px);
     font-style: italic;
     font-weight: 200;
     line-height: 110%;
@@ -230,6 +230,12 @@ input{
     transition-delay: 0.3s;
     background-color: var(--hover-col);
 }
+.tab{
+    display: none;
+}
+.mob{
+    display: none;
+}
 
 /* Custom Css Ends */
 
@@ -276,6 +282,9 @@ input{
     width: 100%;
     height: auto;
     max-height: 100%;
+}
+.load-logo svg path{
+    opacity: 0;
 }
 .loader.page-loaded .load-logo{
     opacity: 0;
@@ -412,9 +421,9 @@ section.banner-section .custom-container{
 }
 .scroll-reveal .srt-wrapper{
     font-family: var(--conso);
-    font-size: 40px;
+    font-size: clamp(24px, 3vw, 40px);
     font-weight: 200;
-    line-height: 150%;
+    line-height: 130%;
     text-align: center;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
@@ -634,7 +643,7 @@ section.elegance .custom-container{
     background-image: url('../img/step-closer.jpeg');
     background-position: top center;
     background-attachment: fixed;
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     min-height: 650px;
     height: 100%;
@@ -726,9 +735,20 @@ section.art-gallery{
     display: flex;
     flex-direction: column;
     gap: 8px;
+    transition: 0.6s all ease;
 }
+.ag-item:hover{
+    scale: 1.1;
+}
+/* .ag-item:hover .ag-img img{
+    scale: 1.1;
+} */
 .ag-img{
     padding-top: 135%;
+    overflow: hidden;
+}
+.ag-img img{
+    transition: 0.4s all ease;
 }
 .ag-wrap{
     position: relative;

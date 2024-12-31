@@ -34,6 +34,33 @@
     .nav-link-con{
         padding: 26px 0;
     }
+    .spacer {
+        height: 120px;
+    }
+    body{
+        font-size: 14px;
+    }
+    .ml-cards .ml-txt .title{
+        font-size: 18px;
+    }
+    section.behind-creative .bc-wrapper{
+        width: 100%;
+    }
+    .bc-txt .bc-para{
+        font-size: 20px;
+    }
+    .bc-txt .bc-auth{
+        font-size: 18px;
+    }
+    .fs-wrapper form{
+        padding: 34px;
+    }
+    .ws-wrapper .word{
+        font-size: 26px;
+    }
+    .ws-wrapper .word-auth{
+        font-size: 14px;
+    }
 }
 /* Max Width 1200px Ends */
 /* Max Width 1100px */
@@ -47,6 +74,144 @@
     }
     .nav-icon-con {
         width: 17%;
+    }
+    section.elegance .custom-container{
+        padding-right: 3%;
+    }
+    .e-wrapper{
+        flex-direction: column;
+    }
+    .desk-tab{
+        display: none;
+    }
+    .tab{
+        display: block;
+    }
+    .ew-txt{
+        width: 100%;
+    }
+    .ew-img{
+        width: 100%;
+        padding-top: 100%;
+    }
+    .ml-cards{
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 24px;
+        margin-top: 40px;
+    }
+    .ws-wrapper .word {
+        font-size: 20px;
+        max-width: 45ch;
+    }
+    .ws-wrapper .wt-sep{
+        margin-top: 38px;
+    }
+    .words-txt {
+        margin-top: 60px;
+    }
+    .bc-txt .bc-para {
+        font-size: 18px;
+    }
+    .bc-txt .bc-auth {
+        font-size: 16px;
+    }
+    section.behind-creative .bc-wrapper{
+        flex-direction: column-reverse;
+    }
+    .bc-txt {
+        width: 100%;
+    }
+    .bc-bg-img{
+        width: 70%;
+        padding-top: 90%;
+    }
+    .bc-img-wrap{
+        width: 100%;
+        margin-top: 24px;
+    }
+    .bc-sm{
+        min-width: 280px;
+    }
+    .bc-txt .bc-para{
+        max-width: 100%;
+    }
+    .fs-wrapper .fs-left{
+        width: 100%;
+    }
+    .fs-wrapper .fs-right{
+        width: 100%;
+        margin-left: 0;
+        padding: 40px 0;
+    }
+    section.form-section .fs-right-img{
+        display: none;
+    }
+    .fs-wrapper{
+        padding: 70px 0;
+    }
+    .video-section{
+        height: 100%;
+        min-height: 100%;
+        padding-bottom: 0;
+        padding-top: 50px;
+    }
+    .video-section .head{
+        margin-top: 0;
+    }
+    .vs-con{
+        position: relative;
+        padding-top: 55%;
+        margin-top: 40px;
+    }
+    .vs-con video{
+        position: absolute;
+        inset: 0;
+    }
+    .side-scroll{
+        height: 100%;
+        min-height: 100%;
+    }
+    .side-scroll-wrap{
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 30%;
+        grid-template-columns: unset;
+        grid-template-rows: unset;
+        overflow: scroll;
+        width: 100%;
+    }
+    .ss-item{
+        min-width: 100%;
+    }
+    .ss-item:hover {
+        scale: 1;
+    }
+    .side-scroll .head {
+        margin-bottom: 36px;
+    }
+    section.art-gallery{
+        height: 100%;
+        min-height: 100%;
+    }
+    .ag-wrap .head{
+        position: relative;
+    }
+    .ag-scroll{
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 40%;
+        grid-template-columns: unset;
+        grid-template-rows: unset;
+        overflow: scroll;
+        gap: 40px;
+        width: 100%;
+        margin-top: 40px;
+    }
+    .ag-wrap{
+        flex-direction: column;
+    }
+    .ag-item{
+        min-width: 100%;
     }
 }
 /* Max Width 991px Ends */
@@ -123,6 +288,41 @@
         text-decoration-skip-ink: none;
         color: var(--beige);
         position: relative;
+    }
+    .desk-mob{
+        display: none;
+    }
+    .side-scroll-wrap{
+        grid-auto-columns: 60%;
+    }
+    .side-scroll .head{
+        padding: 0 10px;
+    }
+    .video-section h2{
+        font-size: 20px;
+    }
+    .ws-wrapper .word{
+        font-size: 16px;
+    }
+    .ws-wrapper .word-auth{
+        font-size: 12px;
+    }
+    .bc-txt .bc-para {
+        font-size: 16px;
+    }
+    .bc-txt .bc-auth {
+        font-size: 14px;
+    }
+    .bc-founder{
+        gap: 20px;
+    }
+    .foot-branding{
+        flex-direction: column;
+        gap: 18px;
+        padding-top: 70px;
+    }
+    .spacer {
+        height: 80px;
     }
 }
 /* Max Width 767px Ends */
