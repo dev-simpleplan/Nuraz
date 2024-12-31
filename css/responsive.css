@@ -181,7 +181,7 @@
         width: 100%;
     }
     .ss-item{
-        min-width: 100%;
+        min-width: auto;
     }
     .ss-item:hover {
         scale: 1;
@@ -212,6 +212,9 @@
     }
     .ag-item{
         min-width: 100%;
+    }
+    .ag-item:hover {
+        scale: 1;
     }
 }
 /* Max Width 991px Ends */
