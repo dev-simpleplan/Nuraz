@@ -993,7 +993,7 @@ section.form-section .fs-right-img {
     cursor: pointer;
 }
 .fs-wrapper form input.custom-button:hover{
-    background-color: var(--beige);
+    background-color: var(--brown);
 }
 .fs-wrapper form .submit-form{
     margin-top: 10px;
@@ -1004,6 +1004,10 @@ section.form-section .fs-right-img {
 .fs-wrapper .fsl-img {
     padding-top: 25%;
     width: 40%;
+}
+.fs-wrapper .form-group .error{
+    color: #D9D3C6;
+    font-size: 12px;
 }
 
 /* Form Section Ends */
