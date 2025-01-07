@@ -605,10 +605,13 @@ section.elegance .custom-container{
     padding-top: 130%;
     overflow: hidden;
 }
-.ml-cards .ml-item:nth-child(odd) .ml-img{
+.ml-cards .owl-item:nth-child(3n+1) .ml-item .ml-img{
     background: linear-gradient(180deg, #1A110A 0%, #38271B 46.97%, #22160E 100%);
 }
-.ml-cards .ml-item:nth-child(even) .ml-img{
+.ml-cards .owl-item:nth-child(3n+2) .ml-item .ml-img{
+    background: linear-gradient(180deg, #560F02 36.77%, #3B0D1A 100%);
+}
+.ml-cards .owl-item:nth-child(3n+3) .ml-item .ml-img{
     background: linear-gradient(180deg, #560F02 36.77%, #3B0D1A 100%);
 }
 .ml-cards .ml-txt .title{
