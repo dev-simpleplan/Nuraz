@@ -247,15 +247,20 @@ input{
     width: 100%;
     height: 100%;
     z-index: 9999;
+    transition: 1s all ease;
+    clip-path: inset(0 0 0% 0);
 }
-.loader.display{
+.loader.page-loaded{
+    clip-path: inset(0 0 100% 0);
+}
+/* .loader.display{
     display: none;
-}
+} */
 .load-wrapper {
     display: flex;
     height: 100%;
     position: relative;
-    perspective: 1500px;
+    /* perspective: 1500px; */
 }
 .load-wrapper .l-left, .load-wrapper .l-right{
     width: 50%;
@@ -263,7 +268,7 @@ input{
     transition: 2s all ease;
     transition-delay: 0.3s;
 }
-.load-wrapper .l-left{
+/* .load-wrapper .l-left{
     transform-origin: 0%;
 }
 .load-wrapper .l-right{
@@ -274,7 +279,7 @@ input{
 }
 .loader.page-loaded .load-wrapper .l-right{
     transform: rotateY(-180deg);
-}
+} */
 .load-wrapper .l-left img, .load-wrapper .l-right img{
     opacity: 0.1;
 }
@@ -612,7 +617,7 @@ section.elegance .custom-container{
     background: linear-gradient(180deg, #560F02 36.77%, #3B0D1A 100%);
 }
 .ml-cards .owl-item:nth-child(3n+3) .ml-item .ml-img{
-    background: linear-gradient(180deg, #560F02 36.77%, #3B0D1A 100%);
+    background: linear-gradient(180deg, #1C1711 0%, #37302A 100%);
 }
 .ml-cards .ml-txt .title{
     font-family: PP Editorial New;
@@ -639,6 +644,16 @@ section.elegance .custom-container{
 }
 .ml-cards{
     margin-top: 80px;
+}
+.ml-cards .owl-nav{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.ml-cards .owl-nav button:hover{
+    background: none !important;
 }
 
 /* Mastery Section Ends */
@@ -778,6 +793,9 @@ section.art-gallery{
 
 /* Behind Creativity */
 
+.behind-creative{
+    display: none;
+}
 section.behind-creative .bc-wrapper{
     display: flex;
     align-items: center;
@@ -961,7 +979,7 @@ section.form-section .fs-right-img {
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     z-index: 0;
-    transition: .8s cubic-bezier(.9, .03, .47, .89);
+    transition: 0.4s all ease;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -972,6 +990,10 @@ section.form-section .fs-right-img {
     position: relative;
     overflow: hidden;
     border: none;
+    cursor: pointer;
+}
+.fs-wrapper form input.custom-button:hover{
+    background-color: var(--beige);
 }
 .fs-wrapper form .submit-form{
     margin-top: 10px;
