@@ -443,8 +443,8 @@ section.banner-section .custom-container{
 /* Side Scroll Section */
 
 .ss-item {
-    min-width: 250px; /* Ensure consistent width for items */
-    height: 350px;
+    min-width: 350px; /* Ensure consistent width for items */
+    height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -491,7 +491,7 @@ section.banner-section .custom-container{
     margin: 0 auto;
 }
 .ss-img img{
-    object-fit: contain;
+    object-fit: cover;
 }
 .ss-txt {
     position: absolute;
@@ -510,6 +510,7 @@ section.banner-section .custom-container{
     transform: translateY(100%);
     transition: 0.4s all ease;
     z-index: 1;
+    display: none;
 }
 .ss-item:hover .ss-txt{
     opacity: 1;
@@ -542,6 +543,7 @@ section.banner-section .custom-container{
     align-items: center;
     justify-content: center;
     margin-top: 60px;
+    display: none;
 }
 
 /* Side Scroll Section Ends */
@@ -624,6 +626,7 @@ section.elegance .custom-container{
 }
 .ml-cards .ml-txt .price{
     color: var(--black);
+    display: none;
 }
 .ml-cards .ml-txt{
     display: flex;
