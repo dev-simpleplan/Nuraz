@@ -164,7 +164,7 @@
         <!-- Scroll Reveal Text Ends -->
 
         <!-- Spacer -->
-        <div class="spacer" id="products">
+        <div class="spacer">
 
         </div>
         <!-- Spacer ends -->
@@ -1165,6 +1165,7 @@
                     x: () => `-${scrollDuration}px`,
                     ease: "none",
                     scrollTrigger: {
+                        id: "products",
                         trigger: ".side-scroll",
                         // scroller: "[data-scroll-container]",
                         start: "top top",
@@ -1308,23 +1309,34 @@
 
     <!-- Anchor Jumpers -->
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-        const navLinks = document.querySelectorAll(".nav-link");
-    
-        navLinks.forEach(link => {
-          link.addEventListener("click", function(e) {
-            e.preventDefault();
-    
-            const targetId = this.getAttribute("href").substring(1); // Remove the "#" character
-            const targetSection = document.getElementById(targetId);
-    
-            if (targetSection) {
-              const offset = targetSection.offsetTop -(window.innerHeight * 0.05); // 20% above the section
-              window.scrollTo({top: offset, behavior: "smooth"});
-            }
-          });
+        document.addEventListener("DOMContentLoaded", function () {
+            const navLinks = document.querySelectorAll(".nav-link");
+
+            navLinks.forEach(link => {
+                link.addEventListener("click", function (e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute("href").substring(1); // Remove the "#" character
+                    const targetSection = document.getElementById(targetId);
+
+                    if (targetSection) {
+                        // Check if the section is managed by GSAP ScrollTrigger
+                        const scrollTrigger = ScrollTrigger.getById(targetId);
+
+                        let offset = targetSection.offsetTop;
+
+                        if (scrollTrigger) {
+                            offset = scrollTrigger.start; // Use the start position from ScrollTrigger
+                        } else {
+                            offset = targetSection.offsetTop - (window.innerHeight * 0.05); // Default offset
+                        }
+
+                        window.scrollTo({ top: offset, behavior: "smooth" });
+                    }
+                });
+            });
         });
-      });
+
     </script>
     <!-- Anchor Jumper Ends -->
 
