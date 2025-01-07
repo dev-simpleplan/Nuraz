@@ -149,7 +149,7 @@
 
         <!-- Scroll Reveal Text -->
 
-        <section class="scroll-reveal">
+        <section class="scroll-reveal" id="about">
             <div class="custom-container">
                 <div class="srt-wrapper">
                     Nuraz seamlessly fuses heritage with <span class="pp-txt">Innovation</span>, creating chandeliers
@@ -169,7 +169,7 @@
 
         <!-- Side Scroll Section -->
 
-        <section class="side-scroll">
+        <section class="side-scroll" id="products">
             <div class="ss-wrapper">
                 <div class="head center">
                     <h2 class="center-flex">artistry <span>in every</span> Sparkle</h2>
@@ -320,7 +320,7 @@
 
         <!-- Elegance Section -->
 
-        <section class="elegance">
+        <section class="elegance" id="why-us">
             <div class="custom-container">
                 <div class="e-wrapper">
                     <div class="ew-txt">
@@ -474,7 +474,7 @@
 
         <!-- Words Section -->
 
-        <section class="words-section">
+        <section class="words-section" id="testimonial">
             <div class="custom-container">
                 <div class="ws-wrapper">
                     <div class="head center">
@@ -637,7 +637,7 @@
 
         <!-- Form Section -->
 
-        <section class="form-section">
+        <section class="form-section" id="contact-us">
             <div class="fs-right-img">
                 <img src="img/form-right.jpg" alt="" class="img">
             </div>
@@ -1019,7 +1019,7 @@
             const targetSection = document.getElementById(targetId);
     
             if (targetSection) {
-              const offset = targetSection.offsetTop -(window.innerHeight * 0.15); // 20% above the section
+              const offset = targetSection.offsetTop -(window.innerHeight * 0.10); // 20% above the section
               window.scrollTo({top: offset, behavior: "smooth"});
             }
           });
