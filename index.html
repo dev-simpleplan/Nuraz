@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="icons/favicon.svg">
     <title>Nuraz</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +20,7 @@
         @font-face {
             font-family: 'Conso';
             src: url('fonts/Conso-ExtraLight.woff2') format('woff2'),
-                url('/fonts/Conso-ExtraLight.woff') format('woff');
+                url('fonts/Conso-ExtraLight.woff') format('woff');
             font-weight: 200;
             font-style: normal;
             font-display: swap;
@@ -28,7 +29,7 @@
         @font-face {
             font-family: 'Conso';
             src: url('fonts/Conso-Light.woff2') format('woff2'),
-                url('/fonts/Conso-Light.woff') format('woff');
+                url('fonts/Conso-Light.woff') format('woff');
             font-weight: 300;
             font-style: normal;
             font-display: swap;
@@ -807,7 +808,7 @@
                 <div class="ag-scroll">
                     <div class="ag-item">
                         <div class="ag-img pos-rel">
-                            <img src="img/art-1.png" alt="" class="img ab">
+                            <img src="img/life-1.png" alt="" class="img ab">
                         </div>
                         <div class="ag-txt">
                             Place 1
@@ -815,7 +816,7 @@
                     </div>
                     <div class="ag-item">
                         <div class="ag-img pos-rel">
-                            <img src="img/art-2.png" alt="" class="img ab">
+                            <img src="img/life-2.png" alt="" class="img ab">
                         </div>
                         <div class="ag-txt">
                             Place 2
@@ -823,7 +824,7 @@
                     </div>
                     <div class="ag-item">
                         <div class="ag-img pos-rel">
-                            <img src="img/art-3.jpeg" alt="" class="img ab">
+                            <img src="img/life-5.png" alt="" class="img ab">
                         </div>
                         <div class="ag-txt">
                             Place 3
@@ -831,7 +832,7 @@
                     </div>
                     <div class="ag-item">
                         <div class="ag-img pos-rel">
-                            <img src="img/art-4.png" alt="" class="img ab">
+                            <img src="img/life-10.jpg" alt="" class="img ab">
                         </div>
                         <div class="ag-txt">
                             Place 4
@@ -839,7 +840,7 @@
                     </div>
                     <div class="ag-item">
                         <div class="ag-img pos-rel">
-                            <img src="img/art-1.png" alt="" class="img ab">
+                            <img src="img/life-3.png" alt="" class="img ab">
                         </div>
                         <div class="ag-txt">
                             Place 5
@@ -847,7 +848,7 @@
                     </div>
                     <div class="ag-item">
                         <div class="ag-img pos-rel">
-                            <img src="img/art-2.png" alt="" class="img ab">
+                            <img src="img/life-4.png" alt="" class="img ab">
                         </div>
                         <div class="ag-txt">
                             Place 6
@@ -855,7 +856,7 @@
                     </div>
                     <div class="ag-item">
                         <div class="ag-img pos-rel">
-                            <img src="img/art-3.jpeg" alt="" class="img ab">
+                            <img src="img/life-6.png" alt="" class="img ab">
                         </div>
                         <div class="ag-txt">
                             Place 7
@@ -863,7 +864,23 @@
                     </div>
                     <div class="ag-item">
                         <div class="ag-img pos-rel">
-                            <img src="img/art-4.png" alt="" class="img ab">
+                            <img src="img/life-8.jpg" alt="" class="img ab">
+                        </div>
+                        <div class="ag-txt">
+                            Place 8
+                        </div>
+                    </div>
+                    <div class="ag-item">
+                        <div class="ag-img pos-rel">
+                            <img src="img/life-9.jpg" alt="" class="img ab">
+                        </div>
+                        <div class="ag-txt">
+                            Place 8
+                        </div>
+                    </div>
+                    <div class="ag-item">
+                        <div class="ag-img pos-rel">
+                            <img src="img/life-7.png" alt="" class="img ab">
                         </div>
                         <div class="ag-txt">
                             Place 8
@@ -1320,15 +1337,20 @@
                     const targetSection = document.getElementById(targetId);
 
                     if (targetSection) {
-                        // Check if the section is managed by GSAP ScrollTrigger
-                        const scrollTrigger = ScrollTrigger.getById(targetId);
+                        // Check if the href contains #contact-us
+                        let offset;
 
-                        let offset = targetSection.offsetTop;
-
-                        if (scrollTrigger) {
-                            offset = scrollTrigger.start; // Use the start position from ScrollTrigger
+                        if (targetId === "contact-us") {
+                            offset = targetSection.offsetTop - (window.innerHeight * 0); // Default offset
                         } else {
-                            offset = targetSection.offsetTop - (window.innerHeight * 0.05); // Default offset
+                            // Check if the section is managed by GSAP ScrollTrigger
+                            const scrollTrigger = ScrollTrigger.getById(targetId);
+
+                            if (scrollTrigger) {
+                                offset = scrollTrigger.start; // Use the start position from ScrollTrigger
+                            } else {
+                                offset = targetSection.offsetTop - (window.innerHeight * 0.10); // Default offset
+                            }
                         }
 
                         window.scrollTo({ top: offset, behavior: "smooth" });

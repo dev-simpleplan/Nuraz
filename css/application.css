@@ -787,6 +787,7 @@ section.art-gallery{
 .ag-scroll .ag-txt{
     font-style: italic;
     text-transform: capitalize;
+    display: none;
 }
 
 /* Art Gallery Ends */

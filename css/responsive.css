@@ -220,6 +220,9 @@
         height: 100svh;
         min-height: 100%;
     }
+    .step-closer{
+        background-attachment: local;
+    }
 }
 /* Max Width 991px Ends */
 /* Max Width 767px */
