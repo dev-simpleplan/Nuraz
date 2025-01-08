@@ -1074,3 +1074,57 @@ section.form-section .fs-right-img {
 }
 
 /* Footer Ends */
+
+/* Thank You */
+
+.thank-you{
+    height: 100vh;
+    min-height: 700px;
+}
+.thank-you .custom-container{
+    height: 100%;
+}
+.ty-con{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    gap: 40px;
+}
+.ty-texture{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    background-color: #3C0A17;
+    z-index: -1;
+}
+.ty-texture img{
+    opacity: 10%;
+}
+.ty-txt h1{
+    color: #714853;
+}
+.ty-in{
+    position: relative;
+    max-width: 200px;
+    width: 100%;
+}
+.ty-txt p{
+    font-family: var(--pp);
+    font-size: clamp(24px, 4vw, 16px);
+    line-height: 140%;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: #714853;
+    text-align: center;
+}
+.ty-txt{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap: 24px;
+}
+
+
+/* Thank You Ends */
