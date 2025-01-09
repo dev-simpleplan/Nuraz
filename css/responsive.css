@@ -223,6 +223,9 @@
     .step-closer{
         background-attachment: local;
     }
+    .fs-contact{
+        padding-bottom: 0;
+    }
 }
 /* Max Width 991px Ends */
 /* Max Width 767px */

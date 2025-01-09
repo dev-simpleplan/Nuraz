@@ -1010,6 +1010,33 @@ section.form-section .fs-right-img {
     color: #D9D3C6;
     font-size: 12px;
 }
+.fs-contact{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding-bottom: 60px;
+}
+.fs-contact p.fs-label {
+    font-family: var(--dmSans);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 0.22em;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #D9D3C6;
+    text-transform: uppercase;
+    margin-top: 0;
+    
+}
+.fs-contact p.fs-label a{
+    color: #8D6771;
+    text-decoration: underline !important;
+}
+.fs-contact p.fs-label .custom-button{
+    color: var(--bodyFont);
+    text-decoration: none !important;
+}
 
 /* Form Section Ends */
 
